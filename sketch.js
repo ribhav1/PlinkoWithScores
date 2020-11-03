@@ -117,12 +117,14 @@ function draw(){
           score += 500;
           particles[i].removeFromWorld();
           particles[i] = null;
+          turns++;
         }
         if(particles[i] != null){
         if(particles[i].body.position.x > 146 && particles[i].body.position.x < 282){
           score += 250;
           particles[i].removeFromWorld();
           particles[i] = null;
+          turns++;
         }
         }
         if(particles[i] != null){
@@ -130,6 +132,7 @@ function draw(){
           score += 50;
           particles[i].removeFromWorld();
           particles[i] = null;
+          turns++;
         }
         }
         if(particles[i] != null){
@@ -137,6 +140,7 @@ function draw(){
           score += 250;
           particles[i].removeFromWorld();
           particles[i] = null;
+          turns++;
         }
         }
         if(particles[i] != null){
@@ -144,6 +148,7 @@ function draw(){
           score += 500;
           particles[i].removeFromWorld();
           particles[i] = null;
+          turns++;
         }
         }
         }
@@ -176,10 +181,8 @@ function draw(){
 }
 
 function mousePressed(){
-  if(turns < 6){
+  if(turns <= 5){
   var particle1 = new particle(mouseX, -10, 13);
   particles.push(particle1);
-  console.log(turns);
   }
-  turns++;
 }
